@@ -19,7 +19,7 @@
 #define MATRIX_ROW_PINS \
     { D0, D1, D2, D3, D4, D5, B5, B4, B3, B2, B1, B0 }
 #define MATRIX_COL_PINS \
-    { C0, C1, C2, C3, C5, C6, C7, F2, F3, F4, F5, F6, F7, A4, A5, A6, A7 }
+    { C0, C1, C2, C3, C5, C6, C7, F7, F6, F5, F4, F3, F2, A7, A6, A5, A4 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
