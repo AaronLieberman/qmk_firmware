@@ -4,20 +4,22 @@
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    qmkbuilder
-#define PRODUCT         keyboard
-#define DESCRIPTION     Keyboard
+#define VENDOR_ID 0xFEED
+#define PRODUCT_ID 0x6060
+#define DEVICE_VER 0x0001
+#define MANUFACTURER qmkbuilder
+#define PRODUCT keyboard
+#define DESCRIPTION Keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 12
 #define MATRIX_COLS 17
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { D0, D1, D2, D3, D4, D5, B5, B4, B3, B2, B1, B0 }
-#define MATRIX_COL_PINS { C0, C1, C2, C3, C5, C6, C7, F2, F3, F4, F5, F6, F7, A4, A5, A6, A7 }
+#define MATRIX_ROW_PINS \
+    { D0, D1, D2, D3, D4, D5, B5, B4, B3, B2, B1, B0 }
+#define MATRIX_COL_PINS \
+    { C0, C1, C2, C3, C5, C6, C7, F2, F3, F4, F5, F6, F7, A4, A5, A6, A7 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
@@ -26,7 +28,7 @@
 /* number of backlight levels */
 
 #ifdef BACKLIGHT_PIN
-#define BACKLIGHT_LEVELS 0
+#    define BACKLIGHT_LEVELS 0
 #endif
 
 /* Set 0 if debouncing isn't needed */
@@ -39,20 +41,17 @@
 #define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
+#define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
 /* prevent stuck modifiers */
 #define PREVENT_STUCK_MODIFIERS
 
-
 #ifdef RGB_DI_PIN
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 0
-#define RGBLIGHT_HUE_STEP 8
-#define RGBLIGHT_SAT_STEP 8
-#define RGBLIGHT_VAL_STEP 8
+#    define RGBLIGHT_ANIMATIONS
+#    define RGBLED_NUM 0
+#    define RGBLIGHT_HUE_STEP 8
+#    define RGBLIGHT_SAT_STEP 8
+#    define RGBLIGHT_VAL_STEP 8
 #endif
 
 #endif
